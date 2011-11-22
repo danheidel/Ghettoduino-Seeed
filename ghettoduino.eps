@@ -1,0 +1,169 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: EAGLE Drawing E:/Documents/eagle/projects/Ghettoduino-Seeed/ghettoduino.brd
+%%Creator: EAGLE
+%%Pages: 1
+%%BoundingBox: 0 0 194 166
+%%EndComments
+
+% Coordinate transfer:
+
+/EU { 254 div 0.072 mul } def
+/inch { 72 mul } def
+
+% Linestyle:
+
+1 setlinecap
+1 setlinejoin
+
+% Drawing functions:
+
+/l {  % draw a line
+   /lw exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   newpath
+   x1 EU y1 EU moveto
+   x2 EU y2 EU lineto
+   lw EU setlinewidth
+   stroke
+   } def
+
+/h {  % draw a hole
+   /d  exch def
+   /y  exch def
+   /x  exch def
+   d 0 gt {
+     newpath
+     x EU y EU d 2 div EU 0 360 arc
+     currentgray dup
+     1 exch sub setgray
+     fill
+     setgray
+     } if
+   } def
+
+/b {  % draw a bar
+   /an exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   /w2 x2 x1 sub 2 div EU def
+   /h2 y2 y1 sub 2 div EU def
+   gsave
+   x1 x2 add 2 div EU y1 y2 add 2 div EU translate
+   an rotate
+   newpath
+   w2     h2     moveto
+   w2 neg h2     lineto
+   w2 neg h2 neg lineto
+   w2     h2 neg lineto
+   closepath
+   fill
+   grestore
+   } def
+
+/c {  % draw a circle
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU 0 360 arc
+   stroke
+   } def
+
+/a {  % draw an arc
+   /lc exch def
+   /ae exch def
+   /as exch def
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   lw rd 2 mul gt {
+     /rd rd lw 2 div add 2 div def
+     /lw rd 2 mul def
+     } if
+   currentlinecap currentlinejoin
+   lc setlinecap 0 setlinejoin
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU as ae arc
+   stroke
+   setlinejoin setlinecap
+   } def
+
+/p {  % draw a pie
+   /d exch def
+   /y exch def
+   /x exch def
+   newpath
+   x EU y EU d 2 div EU 0 360 arc
+   fill
+   } def
+
+/edge { 0.20710678119 mul } def
+
+/o {  % draw an octagon
+   /an exch def
+   /dy exch def
+   /dx exch def
+   /y  exch def
+   /x  exch def
+   gsave
+   x EU y EU translate
+   an dx dy lt { 90 add /dx dy /dy dx def def } if rotate
+   newpath
+      0 dx 2 div sub EU                    0 dy edge  add EU moveto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div add EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div add EU lineto
+      0 dx 2 div add EU                    0 dy edge  add EU lineto
+      0 dx 2 div add EU                    0 dy edge  sub EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div sub EU lineto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div sub EU lineto
+      0 dx 2 div sub EU                    0 dy edge  sub EU lineto
+   closepath
+   fill
+   grestore
+   } def
+
+473884 231130 493836 237582 180.0 b
+473884 254130 493836 260582 180.0 b
+473884 208130 493836 214582 180.0 b
+532884 219630 552836 249082 180.0 b
+515724 125920 525676 132872 270.0 b
+515724 106920 525676 113872 270.0 b
+515724 157920 525676 164872 90.0 b
+515724 176920 525676 183872 90.0 b
+320224 171880 329176 180832 180.0 b
+300224 171880 309176 180832 180.0 b
+233224 170500 242176 179452 180.0 b
+213224 170500 222176 179452 180.0 b
+536264 138720 553216 153672 270.0 b
+536264 106720 553216 121672 270.0 b
+446240 213456 463192 228408 90.0 b
+446240 245456 463192 260408 90.0 b
+145224 170420 154176 179372 180.0 b
+125224 170420 134176 179372 180.0 b
+122624 319670 142576 326122 0.0 b
+122624 296670 142576 303122 0.0 b
+122624 342670 142576 349122 0.0 b
+63624 308170 83576 337622 0.0 b
+92624 429920 102576 436872 90.0 b
+92624 448920 102576 455872 90.0 b
+92624 393920 102576 400872 270.0 b
+92624 374920 102576 381872 270.0 b
+396124 377420 405076 386372 180.0 b
+376124 377420 385076 386372 180.0 b
+313124 376420 322076 385372 180.0 b
+293124 376420 302076 385372 180.0 b
+63124 403420 80076 418372 90.0 b
+63124 435420 80076 450372 90.0 b
+152584 330420 169536 345372 270.0 b
+152584 298420 169536 313372 270.0 b
+464124 376420 473076 385372 0.0 b
+484124 376420 493076 385372 0.0 b
