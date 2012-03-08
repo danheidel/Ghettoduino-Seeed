@@ -233,6 +233,7 @@
 <text x="3.352" y="28.996" size="0.6096" layer="21" font="vector" rot="SR90">5V</text>
 <text x="3.31" y="21.338" size="0.6096" layer="21" font="vector" rot="R90">RST</text>
 <wire x1="0.4" y1="19.3" x2="49.6" y2="19.3" width="0.254" layer="21"/>
+<text x="30.3" y="29.6" size="0.8128" layer="21">46209</text>
 </plain>
 <libraries>
 <library name="1dah">
@@ -1438,6 +1439,14 @@ design rules under a new name.</description>
 <wire x1="35.298" y1="35.596" x2="37.898" y2="35.596" width="0.6096" layer="1"/>
 </signal>
 </signals>
+<errors>
+<approved hash="5,16,386cfa3e8ff60040"/>
+<approved hash="5,16,4dddd18048213d7e"/>
+<approved hash="5,16,674547e529128bf6"/>
+<approved hash="5,16,c3fd7ba3bc31ab27"/>
+<approved hash="5,16,73bc95249a605a08"/>
+<approved hash="5,16,74d6660cdb08dde3"/>
+</errors>
 </board>
 </drawing>
 </eagle>
